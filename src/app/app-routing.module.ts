@@ -1,24 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from '../app/components/login/login.component';
-import { DashboardComponent } from '../app/components/dashboard/dashboard.component';
-import { ResourcesComponent } from '../app/components/resources/resources.component';
-import { BuildingsComponent } from '../app/components/buildings/buildings.component';
-import { TroopsComponent } from '../app/components/troops/troops.component';
-import { BattleComponent } from '../app/components/battle/battle.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginComponent } from './components/login/login.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { ResourcesComponent } from './components/resources/resources.component';
+import { TroopsComponent } from './components/troops/troops.component';
+import { BuildingsComponent } from './components/buildings/buildings.component';
+import { BattleComponent } from './components/battle/battle.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'resources', component: ResourcesComponent },
-  { path: 'buildings', component: BuildingsComponent },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+  },
+  { path: 'profile', component: ProfileComponent },
+  {
+    path: 'resources',
+    component: ResourcesComponent,
+  },
   { path: 'troops', component: TroopsComponent },
-  { path: 'battle', component: BattleComponent },
+  {
+    path: 'buildings',
+    component: BuildingsComponent,
+  },
+  { path: 'attacks', component: BattleComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '**', redirectTo: '/login' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,0 +1,30 @@
+.resource-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.resource-item {
+  flex: 1 1 30%;
+  margin: 10px;
+  padding: 15px;
+  background-color: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #64b5f6;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #42a5f5;
+}

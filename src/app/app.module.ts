@@ -9,6 +9,7 @@ import { ResourcesComponent } from '../app/components/resources/resources.compon
 import { BuildingsComponent } from '../app/components/buildings/buildings.component';
 import { TroopsComponent } from '../app/components/troops/troops.component';
 import { BattleComponent } from '../app/components/battle/battle.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,10 @@ import { BattleComponent } from '../app/components/battle/battle.component';
     BuildingsComponent,
     TroopsComponent,
     BattleComponent,
+    ProfileComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

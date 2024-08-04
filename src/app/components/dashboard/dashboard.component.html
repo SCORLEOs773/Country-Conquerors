@@ -1,6 +1,15 @@
 <h2>Dashboard</h2>
-<p>Welcome, {{ username }}!</p>
-<a routerLink="/resources">Manage Resources</a>
-<a routerLink="/buildings">Build Structures</a>
-<a routerLink="/troops">Train Troops</a>
-<a routerLink="/battle">Attack!</a>
+<div class="dashboard-container">
+  <div class="country-overview">
+    <h3>Country Overview</h3>
+    <p>Country: {{ countryName }}</p>
+  </div>
+  <div class="resources-overview">
+    <h3>Resources</h3>
+    <ul>
+      <li *ngFor="let resource of resourceNames">
+        {{ resource }}: {{ resourceValues[resource] }}
+      </li>
+    </ul>
+  </div>
+</div>

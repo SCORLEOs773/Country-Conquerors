@@ -1,0 +1,17 @@
+.battle-controls {
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #ef5350;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e53935;
+}

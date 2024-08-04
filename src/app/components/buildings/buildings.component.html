@@ -1,1 +1,8 @@
 <p>buildings works!</p>
+<h2>Buildings</h2>
+<div class="buildings-list">
+  <div *ngFor="let building of buildings" class="building-item">
+    <p>{{ building.name }}</p>
+    <button (click)="constructBuilding(building)">Construct</button>
+  </div>
+</div>

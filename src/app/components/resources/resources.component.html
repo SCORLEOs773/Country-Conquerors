@@ -1,4 +1,9 @@
 <h2>Resources</h2>
-<div *ngFor="let resource of resourceNames">
-  <p>{{ resource }}: {{ resourceValues[resource] }}</p>
+<div class="resource-list">
+  <div *ngFor="let resource of resourceNames" class="resource-item">
+    <p>{{ resource }}: {{ resourceValues[resource] }}</p>
+    <button (click)="incrementResources(resource, 10)">
+      +10 {{ resource }}
+    </button>
+  </div>
 </div>

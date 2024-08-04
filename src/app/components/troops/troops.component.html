@@ -1,1 +1,7 @@
-<p>troops works!</p>
+<h2>Troops</h2>
+<div class="troops-list">
+  <div *ngFor="let troop of troops" class="troop-item">
+    <p>{{ troop.name }} - HP: {{ troop.hp }} - Damage: {{ troop.damage }}</p>
+    <button (click)="trainTroop(troop)">Train</button>
+  </div>
+</div>
